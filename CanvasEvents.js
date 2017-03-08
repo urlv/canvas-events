@@ -1,4 +1,4 @@
-var CanvasEvents = (function(canvasElem){
+window['CanvasEvents'] = function(canvasElem){
   'use strict'
 
   if(!(canvasElem instanceof window.HTMLCanvasElement)){
@@ -317,4 +317,4 @@ var CanvasEvents = (function(canvasElem){
   });
 
   return api;
-});
+}
