@@ -155,9 +155,6 @@ var CanvasEvents = (function(canvasElem){
     bezierCurveTo: function(cp1x,cp1y,cp2x,cp2y,x,y){
       return self.ctx.bezierCurveTo(cp1x,cp1y,cp2x,cp2y,x,y);
     },
-    bezierCurveTo: function(cp1x,cp1y,cp2x,cp2y,x,y){
-      return self.ctx.bezierCurveTo(cp1x,cp1y,cp2x,cp2y,x,y);
-    },
     arcTo: function(x1,y1,x2,y2,r){
       return self.ctx.arcTo(x1,y1,x2,y2,r);
     },
