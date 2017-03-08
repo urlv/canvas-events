@@ -176,12 +176,6 @@ var CanvasEvents = (function(canvasElem){
       return self.ctx.translate(x,y);
     },
     transform: function(a,b,c,d,e,f){
-      self.matrix.a = a;
-      self.matrix.b = b;
-      self.matrix.c = c;
-      self.matrix.d = d;
-      self.matrix.e = e;
-      self.matrix.f = f;
       return self.ctx.transform(a,b,c,d,e,f);
     },
     setTransform: function(a,b,c,d,e,f){
@@ -189,12 +183,12 @@ var CanvasEvents = (function(canvasElem){
     },
     fillText: function(text,x,y,maxWidth){
       self.ctx.fillText(text,x,y,maxWidth);
-      var heigh = parseInt(self.ctx.font);
+      var heigh = parseInt(self.ctx.font,10);
       return self.appendShape('rect', {x:x,y:y-heigh,w:self.ctx.measureText(text).width,h:heigh});
     },
     strokeText: function(text,x,y,maxWidth){
       self.ctx.strokeText(text,x,y,maxWidth);
-      var heigh = parseInt(self.ctx.font);
+      var heigh = parseInt(self.ctx.font,10);
       return self.appendShape('rect', {x:x,y:y-heigh,w:self.ctx.measureText(text).width,h:heigh});
     },
     measureText: function(text){
