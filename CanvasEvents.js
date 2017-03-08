@@ -1,4 +1,4 @@
-window['CanvasEvents'] = function(canvasElem){
+var CanvasEvents = function(canvasElem){
   'use strict'
 
   if(!(canvasElem instanceof window.HTMLCanvasElement)){
