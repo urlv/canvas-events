@@ -1,7 +1,7 @@
 # canvas-events
 html5 canvas with events
 
-<a href="https://urlvnbrg.github.io/canvas-events/" target="_blank">demo</a>
+[demo](https://urlvnbrg.github.io/canvas-events/")
 
 ## Quick Start
 
