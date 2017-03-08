@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>CanvasEvents example</title>
+    <style>
+    h1{
+      text-align: center;
+    }
+      canvas{
+        display: block;
+        margin:0 auto;
+        border:5px solid #000;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Click/hover on the shapes within the canvas</h1>
+    <canvas width="300" height="300"></canvas>
+
+    <script src="CanvasEvents.js"></script>
+    <script type="text/javascript">
+      var canvas = document.querySelector('canvas');
+      var h1 = document.querySelector('h1');
+      var ce = new CanvasEvents(canvas);
+
+      ce.fillStyle = 'red';
+      ce.fillRect(20,20, 80, 115).on('click',function(){
+        alert('clicked!');
+      });
+
+      ce.fillStyle = 'green';
+      ce.beginPath();
+
+      ce.arc(200, 200, 30,0,2*Math.PI,false).on('mouseenter', function() {
+        h1.style.background = 'blue';
+      }).on('mouseleave',function(){
+        h1.style.background = 'white';
+      });
+
+      ce.fill();
+    </script>
+  </body>
+</html>
